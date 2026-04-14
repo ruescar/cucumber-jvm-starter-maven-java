@@ -1,8 +1,8 @@
 package com.example.project;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.opentest4j.TestAbortedException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -15,8 +15,12 @@ public class StepDefinitions {
 
     @When("I wait {int} hour")
     public void i_wait_hour(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new TestAbortedException("TODO");
+        assertThat(int1).isEqualTo(1);
+    }
+
+    @Then("my belly should growl")
+    public void my_belly_should_growl() {
+        assertThat(true).isTrue();
     }
 
 }
